@@ -1,0 +1,76 @@
+<!-- <?xml version='1.0' encoding='utf-8'?>
+~ Hibernate, Relational Persistence for Idiomatic Java ~ ~ License: 
+	GNU Lesser General Public License (LGPL), version 2.1 or later. ~ See the 
+	lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		Database connection settings
+
+		<property name="connection.driver_class">org.h2.Driver</property>
+		<property name="connection.url">jdbc:h2:tcp://localhost/~/test</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password"></property>
+
+		JDBC connection pool (use the built-in)
+		<property name="connection.pool_size">1</property>
+
+		SQL dialect
+		<property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+		Cache Provider
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.provder_class">org.hibernate.cache.EhCacheProvider</property>
+		
+		
+		ddl proprty
+		<property name="hbm2ddl.auto">update</property>
+
+
+		Echo all executed SQL
+		<property name="show_sql">true</property>
+
+		Mapping class
+		<mapping class="com.shiva.hibernate.all.one.UserDetails" />
+		<mapping class="com.shiva.hibernate.all.two.UserDetails" />
+		<mapping class="com.shiva.hibernate.all.three.UserDetails" />
+		<mapping class="com.shiva.hibernate.all.five.UserDetails" /> <mapping 
+			class="com.shiva.hibernate.all.five.Vehicle" />
+		<mapping class="com.shiva.hibernate.all.six.UserDetails" /> <mapping 
+			class="com.shiva.hibernate.all.six.Vehicle" />
+
+		<mapping class="com.shiva.hibernate.all.seven.UserDetails" /> <mapping 
+			class="com.shiva.hibernate.all.seven.Vehicle" />
+
+		<mapping class="com.shiva.hibernate.all.eight.UserDetails" /> <mapping 
+			class="com.shiva.hibernate.all.eight.Vehicle" />
+		<mapping class="com.shiva.hibernate.all.nine.UserDetails" /> <mapping 
+			class="com.shiva.hibernate.all.nine.Vehicle" />
+
+
+		<mapping class="com.shiva.hibernate.all.ten.Vehicle" /> <mapping class="com.shiva.hibernate.all.ten.TwoWheeler" 
+			/> <mapping class="com.shiva.hibernate.all.ten.FourWheeler" />
+
+		<mapping class="com.shiva.hibernate.all.eleven.Vehicle" /> <mapping 
+			class="com.shiva.hibernate.all.eleven.TwoWheeler" /> <mapping class="com.shiva.hibernate.all.eleven.FourWheeler" 
+			/>
+
+
+		<mapping class="com.shiva.hibernate.all.hql1.UserDetails" />
+
+		<mapping class="com.shiva.hibernate.all.hql2.UserDetails" />
+
+		<mapping class="com.shiva.hibernate.all.hql3.UserDetails" />
+
+		<mapping class="com.shiva.hibernate.all.CriteriaAPI.UserDetails" />
+		<mapping class="com.search.spring.web.dao.TitleListASSIA" />
+
+	</session-factory>
+
+</hibernate-configuration>
+ -->
