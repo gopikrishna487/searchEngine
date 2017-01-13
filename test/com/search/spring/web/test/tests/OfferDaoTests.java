@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -24,8 +25,8 @@ public class OfferDaoTests {
 	private static Logger logger = Logger.getLogger(OfferDaoTests.class);
 	
 	@Autowired
+	@Qualifier("TitleListASSIADAO")
 	private TitleListASSIADAO TitleListASSIADao;
-	
 	
 	/*@Before
 	public void init() {
@@ -35,12 +36,12 @@ public class OfferDaoTests {
 		jdbc.execute("delete from users");
 	}*/
 	
+	
+	
 	@Test
 	public void testGetTitleListASSIAs() {
 		List<TitleListASSIA> listOfTitles= TitleListASSIADao.getTitleListASSIAs();
 		logger.info(listOfTitles);
 	}
 	
-		
-
 }
