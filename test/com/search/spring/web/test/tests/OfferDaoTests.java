@@ -36,6 +36,8 @@ public class OfferDaoTests {
 		jdbc.execute("delete from users");
 	}*/
 	
+	
+	
 	@Test
 	public void testGetTitleListASSIAs() {
 		List<TitleListASSIA> listOfTitles= TitleListASSIADao.getTitleListASSIAs();
