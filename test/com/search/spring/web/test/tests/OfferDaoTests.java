@@ -12,7 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.search.spring.web.dao.TitleListASSIA;
-import com.search.spring.web.dao.TitleListASSIADAO;
+import com.search.spring.web.dao.TitleListASSIADao;
 
 @ActiveProfiles("dev")
 @ContextConfiguration(locations = {
@@ -26,7 +26,7 @@ public class OfferDaoTests {
 	
 	@Autowired
 	@Qualifier("TitleListASSIADAO")
-	private TitleListASSIADAO TitleListASSIADao;
+	private TitleListASSIADao TitleListASSIADao;
 	
 	/*@Before
 	public void init() {

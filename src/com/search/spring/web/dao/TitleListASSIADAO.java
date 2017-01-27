@@ -16,10 +16,9 @@ import com.search.spring.web.controllers.HomeController;
 @Repository
 @Component("TitleListASSIADAO")
 @Transactional
-public class TitleListASSIADAO
-{
-	private static Logger logger = Logger.getLogger(TitleListASSIADAO.class);
-	
+public class TitleListASSIADao {
+	private static Logger logger = Logger.getLogger(TitleListASSIADao.class);
+
 	@Autowired
 	private SessionFactory sessionFactory;
 
@@ -29,7 +28,7 @@ public class TitleListASSIADAO
 	}
 
 	public List<TitleListASSIA> getTitleListASSIAs() {
-		
+
 		return session().createQuery("from TitleListASSIA").list();
 	}
 
@@ -38,17 +37,17 @@ public class TitleListASSIADAO
 	}
 
 	public boolean delete(String ISSNPrint) {
-		Query query = session()
-				.createQuery("delete from Titles where ISSNPrint=:ISSNPrint");
+		Query query = session().createQuery(
+				"delete from TitleListASSIA where ISSNPrint=:ISSNPrint");
 		query.setString("ISSNPrint", ISSNPrint);
 
 		return query.executeUpdate() == 1;
 	}
 
 	public TitleListASSIA getTitleListASSIA(String ISSNPrint) {
-		
-		Query query = session()
-				.createQuery("from TitleListASSIA where ISSNPrint=:ISSNPrint");
+
+		Query query = session().createQuery(
+				"from TitleListASSIA where ISSNPrint=:ISSNPrint");
 		query.setString("ISSNPrint", ISSNPrint);
 		return (TitleListASSIA) query.uniqueResult();
 	}

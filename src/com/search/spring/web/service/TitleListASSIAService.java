@@ -6,18 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.search.spring.web.dao.TitleListASSIA;
-import com.search.spring.web.dao.TitleListASSIADAO;
+import com.search.spring.web.dao.TitleListASSIADao;
 
 @Component
 public class TitleListASSIAService {
 	@Autowired
-	private TitleListASSIADAO TitleListASSIADao;
+	private TitleListASSIADao TitleListASSIADao;
 
-	public TitleListASSIADAO getTitleListASSIADao() {
+	public TitleListASSIADao getTitleListASSIADao() {
 		return TitleListASSIADao;
 	}
 
-	public void setTitleListASSIADao(TitleListASSIADAO titleListASSIADao) {
+	public void setTitleListASSIADao(TitleListASSIADao titleListASSIADao) {
 		TitleListASSIADao = titleListASSIADao;
 	}
 

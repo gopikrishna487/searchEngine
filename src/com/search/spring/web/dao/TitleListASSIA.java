@@ -11,12 +11,6 @@ import java.io.Serializable;
  *<ol>persist into the database</ol>
  */
 
-/**
- *
- * @author Ram Srinvasan
- * Use class name in NamedQuery
- * Use table name in NamedNativeQuery
- */
 // no name = here so the entity can be used as Person
 @javax.persistence.Entity
 // table name specified here

@@ -32,7 +32,7 @@ public class ExcelTest {
 				.readBooksFromExcelFile(excelFilePath);
 		System.out.println(listBooks);
 		// logger.info(listBooks);
-		final TitleListASSIADAO books = getPropertyAsGeneric("TitleListASSIADAO");
+		final TitleListASSIADao books = getPropertyAsGeneric("TitleListASSIADAO");
 		System.out.println("ExcelTest.main: " + listBooks.get(0));
 		books.saveOrUpdate(listBooks.get(0));
 		List<TitleListASSIA> ls = books.getTitleListASSIAs();
