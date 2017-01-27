@@ -28,7 +28,7 @@ public class SociologyDao {
 		return sessionFactory.getCurrentSession();
 	}
 
-	public List<PoliticalScience> getPoliticalSciences() {
+	public List<Sociology> getSociologys() {
 
 		return session().createQuery("from Sociology").list();
 	}
@@ -45,7 +45,7 @@ public class SociologyDao {
 		return query.executeUpdate() == 1;
 	}
 
-	public Sociology getPoliticalScience(String ISSN) {
+	public Sociology getSociology(String ISSN) {
 
 		Query query = session().createQuery(
 				"from Sociology where ISSN=:ISSN");
